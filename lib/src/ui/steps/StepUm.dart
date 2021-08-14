@@ -3,20 +3,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:toro_investimentos/src/ui/components/toro_button.dart';
 import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
-class WelcomeUm extends StatelessWidget {
+class StepUm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             padding: EdgeInsets.only(bottom: 24),
             child: Text(
               "Ola!\nAgora voce tem o jeito\nmais facil de investir na\nBolsa.",
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.headline3,
               textAlign: TextAlign.center,
             ),
           ),
@@ -28,9 +28,7 @@ class WelcomeUm extends StatelessWidget {
           ToroButton(
               padding: EdgeInsets.only(bottom: 14),
               buttonText: 'Abra sua conta gratis',
-              onPressed: () {
-                print("teste");
-              }),
+              onPressed: () {}),
           ToroButton(
               padding: EdgeInsets.only(bottom: 14),
               buttonText: 'Entrar',

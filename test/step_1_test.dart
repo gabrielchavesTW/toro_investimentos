@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:toro_investimentos/src/ui/welcome/WelcomeUm.dart';
+import 'package:toro_investimentos/src/ui/steps/StepUm.dart';
 
 void main() {
   Future<void> setup(WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
       home: Scaffold(
         body:   SingleChildScrollView(
-          child: WelcomeUm(),
+          child: StepUm(),
         ),
       ),
     ));
   }
 
-  testWidgets('WelcomeUm should have text description',
+  testWidgets('StepUm should have text description',
           (WidgetTester tester) async {
         await setup(tester);
 
-        expect(find.text('Ola!\nAgora voce tem o jeito\n mais facil de investir na\nBolsa.'), findsOneWidget);
+        expect(find.text('Ola!\nAgora voce tem o jeito\nmais facil de investir na\nBolsa.'), findsOneWidget);
       });
 
-  testWidgets('WelcomeUm should have buttons abra sua conta gratis e entrar',
+  testWidgets('StepUm should have buttons abra sua conta gratis e entrar',
           (WidgetTester tester) async {
         await setup(tester);
 
