@@ -5,16 +5,27 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 32),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            'assets/images/logo-transparent.png',
-            width: 150,
+          Container(
+            padding: EdgeInsets.only(left:0,top:0,right:0,bottom:24),
+            child: Image.asset(
+              'assets/images/logo-transparent.png',
+              width: 150,
+            ),
           ),
-          Text("O jeito mais fácil de investir na Bolsa."),
+          RichText(
+              text: TextSpan(
+                  style: Theme.of(context).textTheme.headline1,
+                  children: <TextSpan>[
+                TextSpan(text: 'O jeito mais fácil\n de '),
+                TextSpan(
+                    text: 'investir', style: Theme.of(context).textTheme.headline2,),
+                TextSpan(text: ' na \nBolsa.'),
+              ])),
           LoginForm()
         ],
       ),

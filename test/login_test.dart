@@ -2,23 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
-
 void main() {
   Future<void> setup(WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
-      theme: ThemeData.dark(),
       home: Scaffold(
         body: LoginForm(),
       ),
     ));
   }
+
   testWidgets('Login screen should show text', (WidgetTester tester) async {
     await setup(tester);
 
-    expect(find.text('O jeito mais fácil de investir na Bolsa.'), findsOneWidget);
+    expect(
+        find.text('O jeito mais fácil de investir na Bolsa.'), findsOneWidget);
   });
 
-  testWidgets('Login screen should have email and senha inputs', (WidgetTester tester) async {
+  testWidgets('Login screen should have email and senha inputs',
+      (WidgetTester tester) async {
     await setup(tester);
 
     expect(find.text('E-mail ou CPF:'), findsOneWidget);

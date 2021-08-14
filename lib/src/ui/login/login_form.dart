@@ -47,20 +47,21 @@ class LoginFormState extends State<LoginForm> {
             controller: senhaController,
           ),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            padding: EdgeInsets.symmetric(vertical: 16.0),
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
                 // Validate returns true if the form is valid, or false otherwise.
                 if (_formKey.currentState!.validate()) {
-                  // If the form is valid, display a snackbar. In the real world,
-                  // you'd often call a server or save the information in a database.
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
+                    SnackBar(content: Text('Processing Data')),
                   );
                 }
               },
-              child: const Text('ENTRAR'),
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 16),
+                child: Text('ENTRAR'),
+              ),
             ),
           )
         ],
