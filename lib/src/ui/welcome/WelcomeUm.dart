@@ -1,40 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:toro_investimentos/src/ui/components/toro_button.dart';
 import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
 class WelcomeUm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Ola!\nAgora voce tem o jeito\n mais facil de investir na\nBolsa.",
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Container(
-          padding: EdgeInsets.only(left:0,top:0,right:0,bottom:24),
-          child: Image.asset(
-            'assets/images/onboarding/step1.svg',
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.only(bottom: 24),
+            child: Text(
+              "Ola!\nAgora voce tem o jeito\nmais facil de investir na\nBolsa.",
+              style: Theme.of(context).textTheme.bodyText1,
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-          },
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 16),
-            child: Text('Abra sua conta gratis'),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
+            child: SvgPicture.asset('assets/images/onboarding/step1.svg'),
           ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-          },
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 16),
-            child: Text('Entrar'),
-          ),
-        ),
-      ],
+          ToroButton(
+              padding: EdgeInsets.only(bottom: 14),
+              buttonText: 'Abra sua conta gratis',
+              onPressed: () {
+                print("teste");
+              }),
+          ToroButton(
+              padding: EdgeInsets.only(bottom: 14),
+              buttonText: 'Entrar',
+              buttonStyle: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+              ),
+              buttonTextStyle: TextStyle(color: Theme.of(context).primaryColor),
+              onPressed: () {}),
+        ],
+      ),
     );
   }
 }
