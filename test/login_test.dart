@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
-import 'package:toro_investimentos/src/ui/login/login.dart';
 
 void main() {
   Future<void> setup(WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
       theme: ThemeData.dark(),
       home: Scaffold(
-        body: Login(),
+        body: LoginForm(),
       ),
     ));
   }

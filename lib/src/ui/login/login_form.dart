@@ -26,12 +26,9 @@ class LoginFormState extends State<LoginForm> {
     return Form(
       key: _formKey,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
-            decoration: InputDecoration(
-              labelText: "E-mail ou CPF:"
-            ),
+            decoration: InputDecoration(labelText: "E-mail ou CPF:"),
             validator: (value) {
               //@TODO
               // validator para email ou cpf
@@ -41,9 +38,7 @@ class LoginFormState extends State<LoginForm> {
             controller: emailOuCpfController,
           ),
           TextFormField(
-            decoration: InputDecoration(
-                labelText: "Senha:"
-            ),
+            decoration: InputDecoration(labelText: "Senha:"),
             validator: (value) {
               //@TODO
               // validator para senha
@@ -51,13 +46,13 @@ class LoginFormState extends State<LoginForm> {
             },
             controller: senhaController,
           ),
-          Padding(
+          Container(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
+            width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
                 // Validate returns true if the form is valid, or false otherwise.
                 if (_formKey.currentState!.validate()) {
-
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -67,7 +62,7 @@ class LoginFormState extends State<LoginForm> {
               },
               child: const Text('ENTRAR'),
             ),
-          ),
+          )
         ],
       ),
     );
