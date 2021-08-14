@@ -4,7 +4,11 @@ import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
 void main() {
   Future<void> setup(WidgetTester tester) async {
-    await tester.pumpWidget(Container(child: LoginForm(),));
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LoginForm(),
+      ),
+    ));
   }
 
   testWidgets('Login form should have email and senha inputs',
