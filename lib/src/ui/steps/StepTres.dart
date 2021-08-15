@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:toro_investimentos/src/ui/steps/StepButtons.dart';
 
-class StepDois extends StatelessWidget {
+class StepTres extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,12 +14,12 @@ class StepDois extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
-            child: SvgPicture.asset('assets/images/onboarding/step2.svg'),
+            child: SvgPicture.asset('assets/images/onboarding/step3.svg'),
           ),
           Container(
             padding: EdgeInsets.only(bottom: 24),
             child: Text(
-              "Corretagem Zero",
+              "Cashback em Fundos de Investimento",
               style: Theme.of(context).textTheme.headline3,
               textAlign: TextAlign.center,
             ),
@@ -27,24 +27,21 @@ class StepDois extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(bottom: 24),
             child: RichText(
-              key: ValueKey('StepDoisDescription'),
+              key: ValueKey('StepTresDescription'),
               textAlign: TextAlign.center,
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
-                  TextSpan(text: 'Aproveite para investir com\n'),
+                  TextSpan(text: 'Receba parte da taxa de administração, '),
                   TextSpan(
-                    text: 'Corretagem Zero em qualquer tipo\nde ativo',
+                    text: 'em dinheiro, direto na\nsua conta Toro.',
                     style: Theme.of(context).textTheme.bodyText2,
                   ),
-                  TextSpan(text: ', inclusive da Bolsa.'),
                 ],
               ),
             ),
           ),
-          StepButtons(
-            currentPage: 1,
-          )
+          StepButtons(currentPage: 2,)
         ],
       ),
     );

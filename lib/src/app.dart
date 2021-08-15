@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:toro_investimentos/src/ui/login/login.dart';
-import 'package:toro_investimentos/src/ui/steps/StepDois.dart';
-import 'package:toro_investimentos/src/ui/steps/StepUm.dart';
+import 'package:toro_investimentos/src/ui/steps/step.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final PageController controller = PageController(initialPage: 0);
     // TODO: implement build
     return MaterialApp(
       theme: ThemeData(
@@ -32,9 +31,9 @@ class App extends StatelessWidget {
               color: Color(0XFF4baed3),
               fontWeight: FontWeight.bold),
           headline3: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w400,
-            color: Colors.black
+              fontSize: 30,
+              fontWeight: FontWeight.w400,
+              color: Colors.black
           ),
           bodyText1: TextStyle(
             fontSize: 16,
@@ -47,7 +46,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        body: StepDois(),
+          body: StepPage()
       ),
     );
   }
