@@ -32,7 +32,7 @@ class StepTres extends StatelessWidget {
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
-                  TextSpan(text: 'Receba parte da taxa de administração, '),
+                  TextSpan(text: 'Receba parte da taxa de\nadministração, '),
                   TextSpan(
                     text: 'em dinheiro, direto na\nsua conta Toro.',
                     style: Theme.of(context).textTheme.bodyText2,

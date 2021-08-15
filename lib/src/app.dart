@@ -4,8 +4,7 @@ import 'package:toro_investimentos/src/ui/steps/step.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final PageController controller = PageController(initialPage: 0);
-    // TODO: implement build
+    //double heightFactor = MediaQuery.of(context).size.height/708;
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.light,
@@ -25,13 +24,13 @@ class App extends StatelessWidget {
                 textStyle: TextStyle(color: Colors.white))),
         textTheme: const TextTheme(
           headline1: TextStyle(
-              fontSize: 30.0, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),
           headline2: TextStyle(
-              fontSize: 30.0,
+              fontSize: 24,
               color: Color(0XFF4baed3),
               fontWeight: FontWeight.bold),
           headline3: TextStyle(
-              fontSize: 30,
+              fontSize: 24,
               fontWeight: FontWeight.w400,
               color: Colors.black
           ),

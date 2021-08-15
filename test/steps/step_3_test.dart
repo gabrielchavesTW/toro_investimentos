@@ -27,7 +27,7 @@ void main() {
 
       final richTextWidget = tester.element(richText).widget as RichText;
       expect(richTextWidget.text.toPlainText(),
-          'Receba parte da taxa de administração, em dinheiro, direto na\nsua conta Toro.');
+          'Receba parte da taxa de\nadministração, em dinheiro, direto na\nsua conta Toro.');
     },
   );
 
