@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toro_investimentos/src/ui/login/login.dart';
 import 'package:toro_investimentos/src/ui/steps/step.dart';
 
 class App extends StatelessWidget {
@@ -45,7 +46,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-          body: StepPage()
+          body: Login()
       ),
     );
   }

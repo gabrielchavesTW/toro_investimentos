@@ -2,7 +2,7 @@
     package="com.toro.investimentos.toro_investimentos">
    <application
         android:label="toro_investimentos"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/logo_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
