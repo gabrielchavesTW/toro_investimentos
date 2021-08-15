@@ -35,4 +35,9 @@ void main() {
     await setup(tester);
     expect(find.byType(StepButtons), findsOneWidget);
   });
+
+  testWidgets('StepTres should have StepTres image', (WidgetTester tester) async {
+    await setup(tester);
+    expect(find.byKey(ValueKey('StepTresImage')), findsOneWidget);
+  });
 }
