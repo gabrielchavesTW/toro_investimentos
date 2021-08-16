@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:toro_investimentos/src/ui/login/login_form.dart';
 
 class ToroButton extends StatelessWidget {
   const ToroButton({

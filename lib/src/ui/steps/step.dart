@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:toro_investimentos/src/ui/steps/StepDois.dart';
-import 'package:toro_investimentos/src/ui/steps/StepQuatro.dart';
-import 'package:toro_investimentos/src/ui/steps/StepTres.dart';
-import 'package:toro_investimentos/src/ui/steps/StepUm.dart';
+import 'package:toro_investimentos/src/ui/steps/step_dois.dart';
+import 'package:toro_investimentos/src/ui/steps/step_quatro.dart';
+import 'package:toro_investimentos/src/ui/steps/step_tres.dart';
+import 'package:toro_investimentos/src/ui/steps/step_um.dart';
 
 class StepPage extends StatelessWidget {
   final PageController controller = PageController(initialPage: 0);

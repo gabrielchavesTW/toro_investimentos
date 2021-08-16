@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'StepButtons.dart';
+import 'step_buttons.dart';
 
 class StepUm extends StatelessWidget {
   @override

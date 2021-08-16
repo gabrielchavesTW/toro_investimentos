@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:toro_investimentos/src/ui/steps/StepButtons.dart';
+import 'package:toro_investimentos/src/ui/steps/step_buttons.dart';
 
 class StepDois extends StatelessWidget {
   @override

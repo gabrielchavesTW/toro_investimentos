@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:toro_investimentos/src/ui/steps/StepButtons.dart';
-import 'package:toro_investimentos/src/ui/steps/StepDois.dart';
+import 'package:toro_investimentos/src/ui/steps/step_buttons.dart';
+import 'package:toro_investimentos/src/ui/steps/step_dois.dart';
 
 void main() {
   Future<void> setup(WidgetTester tester) async {

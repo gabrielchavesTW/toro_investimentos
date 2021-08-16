@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toro_investimentos/src/ui/login/login.dart';
-import 'package:toro_investimentos/src/ui/steps/step.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //double heightFactor = MediaQuery.of(context).size.height/708;
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.light,
