@@ -2,11 +2,12 @@
 // in toro_investimentos/test/ui/acao/acao_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i4;
+import 'dart:async' as _i3;
 
+import 'package:bloc/bloc.dart' as _i5;
+import 'package:get_it/get_it.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:toro_investimentos/src/repository/acao_repository.dart' as _i3;
-import 'package:web_socket_channel/web_socket_channel.dart' as _i2;
+import 'package:toro_investimentos/src/blocs/acao.dart' as _i4;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: avoid_setters_without_getters
@@ -16,21 +17,66 @@ import 'package:web_socket_channel/web_socket_channel.dart' as _i2;
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
-class _FakeWebSocketChannel_0 extends _i1.Fake implements _i2.WebSocketChannel {
-}
+class _FakeGetIt_0 extends _i1.Fake implements _i2.GetIt {}
 
-/// A class which mocks [AcaoRepository].
+class _FakeStreamSubscription_1<T> extends _i1.Fake
+    implements _i3.StreamSubscription<T> {}
+
+/// A class which mocks [AcaoCubit].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockAcaoRepository extends _i1.Mock implements _i3.AcaoRepository {
+class MockAcaoCubit extends _i1.Mock implements _i4.AcaoCubit {
   @override
-  _i2.WebSocketChannel get channel =>
-      (super.noSuchMethod(Invocation.getter(#channel),
-          returnValue: _FakeWebSocketChannel_0()) as _i2.WebSocketChannel);
+  _i2.GetIt get getIt => (super.noSuchMethod(Invocation.getter(#getIt),
+      returnValue: _FakeGetIt_0()) as _i2.GetIt);
   @override
-  _i4.Stream<dynamic> fetchAcoes() =>
-      (super.noSuchMethod(Invocation.method(#fetchAcoes, []),
-          returnValue: Stream<dynamic>.empty()) as _i4.Stream<dynamic>);
+  String get state =>
+      (super.noSuchMethod(Invocation.getter(#state), returnValue: '')
+          as String);
+  @override
+  _i3.Stream<String> get stream =>
+      (super.noSuchMethod(Invocation.getter(#stream),
+          returnValue: Stream<String>.empty()) as _i3.Stream<String>);
+  @override
+  void fetchAcoes() => super.noSuchMethod(Invocation.method(#fetchAcoes, []),
+      returnValueForMissingStub: null);
+  @override
+  void closeChannel() =>
+      super.noSuchMethod(Invocation.method(#closeChannel, []),
+          returnValueForMissingStub: null);
+  @override
+  _i3.StreamSubscription<String> listen(void Function(String)? onData,
+          {Function? onError, void Function()? onDone, bool? cancelOnError}) =>
+      (super.noSuchMethod(
+              Invocation.method(#listen, [
+                onData
+              ], {
+                #onError: onError,
+                #onDone: onDone,
+                #cancelOnError: cancelOnError
+              }),
+              returnValue: _FakeStreamSubscription_1<String>())
+          as _i3.StreamSubscription<String>);
+  @override
+  void emit(String? state) =>
+      super.noSuchMethod(Invocation.method(#emit, [state]),
+          returnValueForMissingStub: null);
+  @override
+  void onChange(_i5.Change<String>? change) =>
+      super.noSuchMethod(Invocation.method(#onChange, [change]),
+          returnValueForMissingStub: null);
+  @override
+  void addError(Object? error, [StackTrace? stackTrace]) =>
+      super.noSuchMethod(Invocation.method(#addError, [error, stackTrace]),
+          returnValueForMissingStub: null);
+  @override
+  void onError(Object? error, StackTrace? stackTrace) =>
+      super.noSuchMethod(Invocation.method(#onError, [error, stackTrace]),
+          returnValueForMissingStub: null);
+  @override
+  _i3.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
+      returnValue: Future<void>.value(),
+      returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
   @override
   String toString() => super.toString();
 }

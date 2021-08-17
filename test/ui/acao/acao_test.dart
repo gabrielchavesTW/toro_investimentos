@@ -3,20 +3,22 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:toro_investimentos/src/blocs/acao.dart';
 import 'package:toro_investimentos/src/repository/acao_repository.dart';
 import 'package:toro_investimentos/src/ui/acoes/acoes.dart';
 
 import 'acao_test.mocks.dart';
 
-@GenerateMocks([], customMocks: [MockSpec<AcaoRepository>(as:#MockAcaoRepository, returnNullOnMissingStub: true)])
+@GenerateMocks([], customMocks: [MockSpec<AcaoCubit>(as:#MockAcaoCubit, returnNullOnMissingStub: true)])
 void main() {
   final getIt = GetIt.instance;
-  getIt.registerSingleton<AcaoRepository>(MockAcaoRepository());
+  getIt.registerSingleton<AcaoCubit>(MockAcaoCubit());
 
 
   void setupStubs(){
-    AcaoRepository mockAcaoRepository = getIt<AcaoRepository>();
-    when(mockAcaoRepository.fetchAcoes()).thenAnswer((_) => Stream<dynamic>.empty());
+    AcaoCubit mockAcaoCubit = getIt<AcaoCubit>();
+    when(mockAcaoCubit.fetchAcoes()).thenAnswer((_) => Stream<dynamic>.empty());
+    when(mockAcaoCubit.stream).thenAnswer((_) => Stream<String>.empty());
   }
 
   Future<void> setup(WidgetTester tester) async {
@@ -35,8 +37,8 @@ void main() {
     'Should call acaoRepository.fetchAcoes',
         (WidgetTester tester) async {
           await setup(tester);
-          AcaoRepository mockAcaoRepository = getIt<AcaoRepository>();
-          verify(mockAcaoRepository.fetchAcoes());
+          AcaoCubit mockAcaoCubit = getIt<AcaoCubit>();
+          verify(mockAcaoCubit.fetchAcoes());
     },
   );
 }
