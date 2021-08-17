@@ -26,10 +26,14 @@ samples, guidance on mobile development, and a full API reference.
 
 
 ## Como rodar os testes unitários
-1- É necessário rodar o comando "flutter pub run build_runner build" para gerar os arquivos de mock.
+1- É necessário rodar o comando "flutter pub run build_runner build --delete-conflicting-outputs" para gerar os arquivos de mock.
 2- Depois de gerados, os testes podem ser executados normalmente
 
 ### Observações
 1- Durante o desenvolvimento do teste, você pode rodar o comando "flutter pub run build_runner watch" 
 para que ele fique observando as mudanças nos testes e gere o arquivo novamente sem precisar rodar 
 o comando denovo.
+
+## Como setar o environment
+O ambiente esta setado como default para DEV, porém, é possível alterar através do seguinte comando:
+"flutter run --dart-define=ENVIRONMENT=STAGING"
