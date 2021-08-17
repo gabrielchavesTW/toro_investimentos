@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ioc/ioc.dart';
-import 'package:toro_investimentos/src/blocs/acao.dart';
+import 'package:toro_investimentos/src/ui/acoes/acoes.dart';
 import 'package:toro_investimentos/src/ui/login/login.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Ioc().bind(AcaoCubit, (ioc) => new AcaoCubit());
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.light,
@@ -47,7 +45,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-          body: Login()
+          body: AcoesPage()
       ),
     );
   }
