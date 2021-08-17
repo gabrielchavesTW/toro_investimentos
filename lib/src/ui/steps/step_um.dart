@@ -23,7 +23,10 @@ class StepUm extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
-            child: SvgPicture.asset('assets/images/onboarding/step1.svg', key: ValueKey('StepUmImage'),),
+            child: SvgPicture.asset(
+              'assets/images/onboarding/step1.svg',
+              key: ValueKey('StepUmImage'),
+            ),
           ),
           StepButtons(
             currentPage: 0,

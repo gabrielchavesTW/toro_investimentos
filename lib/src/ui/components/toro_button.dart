@@ -32,7 +32,9 @@ class ToroButton extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 16),
           child: Text(
             buttonText,
-            style: buttonTextStyle != null ? buttonTextStyle : TextStyle(color: Colors.white),
+            style: buttonTextStyle != null
+                ? buttonTextStyle
+                : TextStyle(color: Colors.white),
           ),
         ),
       ),

@@ -14,7 +14,10 @@ class StepTres extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
-            child: SvgPicture.asset('assets/images/onboarding/step3.svg', key: ValueKey('StepTresImage'),),
+            child: SvgPicture.asset(
+              'assets/images/onboarding/step3.svg',
+              key: ValueKey('StepTresImage'),
+            ),
           ),
           Container(
             padding: EdgeInsets.only(bottom: 24),
@@ -41,7 +44,9 @@ class StepTres extends StatelessWidget {
               ),
             ),
           ),
-          StepButtons(currentPage: 2,)
+          StepButtons(
+            currentPage: 2,
+          )
         ],
       ),
     );

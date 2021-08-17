@@ -14,7 +14,9 @@ class StepPage extends StatelessWidget {
     if (deviceSize > 580) {
       return Container(child: _buildPageView());
     } else {
-      return SingleChildScrollView(child: Container(height: 580, child: _buildPageView()),);
+      return SingleChildScrollView(
+        child: Container(height: 580, child: _buildPageView()),
+      );
     }
   }
 

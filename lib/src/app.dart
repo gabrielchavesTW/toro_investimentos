@@ -30,10 +30,7 @@ class App extends StatelessWidget {
               color: Color(0XFF4baed3),
               fontWeight: FontWeight.bold),
           headline3: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w400,
-              color: Colors.black
-          ),
+              fontSize: 24, fontWeight: FontWeight.w400, color: Colors.black),
           bodyText1: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w300,
@@ -44,9 +41,7 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(
-          body: AcoesPage()
-      ),
+      home: Scaffold(body: AcoesPage()),
     );
   }
 }

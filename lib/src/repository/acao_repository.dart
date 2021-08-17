@@ -9,6 +9,7 @@ class AcaoRepository {
   Stream<dynamic> fetchAcoes() {
     return channel.stream;
   }
+
   close() async {
     await channel.sink.close();
   }

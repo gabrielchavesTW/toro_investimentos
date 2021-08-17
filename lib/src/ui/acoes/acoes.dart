@@ -16,7 +16,8 @@ class _AcoesPageState extends State<AcoesPage> {
   GetIt getIt = GetIt.instance;
   late AcaoCubit acaoCubit;
 
-  @override void initState() {
+  @override
+  void initState() {
     acaoCubit = getIt<AcaoCubit>();
     acaoCubit.fetchAcoes();
     super.initState();

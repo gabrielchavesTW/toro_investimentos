@@ -11,7 +11,7 @@ class Login extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.only(left:0,top:0,right:0,bottom:24),
+            padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
             child: Image.asset(
               'assets/images/logo-transparent.png',
               key: ValueKey('ToroLogoLogin'),
@@ -19,15 +19,17 @@ class Login extends StatelessWidget {
             ),
           ),
           RichText(
-            key: ValueKey('LoginDescription'),
+              key: ValueKey('LoginDescription'),
               text: TextSpan(
                   style: Theme.of(context).textTheme.headline1,
                   children: <TextSpan>[
-                TextSpan(text: 'O jeito mais fácil\nde '),
-                TextSpan(
-                    text: 'investir', style: Theme.of(context).textTheme.headline2,),
-                TextSpan(text: ' na \nBolsa.'),
-              ])),
+                    TextSpan(text: 'O jeito mais fácil\nde '),
+                    TextSpan(
+                      text: 'investir',
+                      style: Theme.of(context).textTheme.headline2,
+                    ),
+                    TextSpan(text: ' na \nBolsa.'),
+                  ])),
           LoginForm()
         ],
       ),

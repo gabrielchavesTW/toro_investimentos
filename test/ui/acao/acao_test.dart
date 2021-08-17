@@ -9,13 +9,14 @@ import 'package:toro_investimentos/src/ui/acoes/acoes.dart';
 
 import 'acao_test.mocks.dart';
 
-@GenerateMocks([], customMocks: [MockSpec<AcaoCubit>(as:#MockAcaoCubit, returnNullOnMissingStub: true)])
+@GenerateMocks([], customMocks: [
+  MockSpec<AcaoCubit>(as: #MockAcaoCubit, returnNullOnMissingStub: true)
+])
 void main() {
   final getIt = GetIt.instance;
   getIt.registerSingleton<AcaoCubit>(MockAcaoCubit());
 
-
-  void setupStubs(){
+  void setupStubs() {
     AcaoCubit mockAcaoCubit = getIt<AcaoCubit>();
     when(mockAcaoCubit.fetchAcoes()).thenAnswer((_) => Stream<dynamic>.empty());
     when(mockAcaoCubit.stream).thenAnswer((_) => Stream<String>.empty());
@@ -35,10 +36,10 @@ void main() {
 
   testWidgets(
     'Should call acaoRepository.fetchAcoes',
-        (WidgetTester tester) async {
-          await setup(tester);
-          AcaoCubit mockAcaoCubit = getIt<AcaoCubit>();
-          verify(mockAcaoCubit.fetchAcoes());
+    (WidgetTester tester) async {
+      await setup(tester);
+      AcaoCubit mockAcaoCubit = getIt<AcaoCubit>();
+      verify(mockAcaoCubit.fetchAcoes());
     },
   );
 }

@@ -6,7 +6,6 @@ class AcaoCubit extends Cubit<String> {
   final GetIt getIt = GetIt.instance;
   AcaoCubit() : super("");
 
-
   void fetchAcoes() {
     Stream<dynamic> stream = getIt<AcaoRepository>().fetchAcoes();
     stream.listen((event) {
@@ -14,7 +13,7 @@ class AcaoCubit extends Cubit<String> {
     });
   }
 
-  void closeChannel() async{
+  void closeChannel() async {
     await getIt<AcaoRepository>().close();
     emit("");
   }

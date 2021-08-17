@@ -16,7 +16,7 @@ void main() {
 
   testWidgets(
     'Login should have text description',
-        (WidgetTester tester) async {
+    (WidgetTester tester) async {
       await setup(tester);
 
       final richText = find.byKey(

@@ -14,7 +14,10 @@ class StepDois extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 24),
-            child: SvgPicture.asset('assets/images/onboarding/step2.svg', key: ValueKey('StepDoisImage'),),
+            child: SvgPicture.asset(
+              'assets/images/onboarding/step2.svg',
+              key: ValueKey('StepDoisImage'),
+            ),
           ),
           Container(
             padding: EdgeInsets.only(bottom: 24),
