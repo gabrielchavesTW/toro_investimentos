@@ -7,7 +7,7 @@ import 'package:toro_investimentos/src/ui/steps/step_buttons.dart';
 void main() {
   Future<void> setup(WidgetTester tester) async {
     final dpi = tester.binding.window.devicePixelRatio;
-    tester.binding.window.physicalSizeTestValue = Size(1080 * dpi, 2220* dpi);
+    tester.binding.window.physicalSizeTestValue = Size(1080 * dpi, 2220 * dpi);
     await tester.pumpWidget(MaterialApp(
       routes: {
         '/login': (context) => Login(),
@@ -31,15 +31,13 @@ void main() {
   });
 
   testWidgets('Botao entrar deve abrir a tela de login ao ser clicado',
-          (WidgetTester tester) async {
-        await setup(tester);
+      (WidgetTester tester) async {
+    await setup(tester);
 
+    var buttonEntrar = find.byType(ToroButton).last;
+    await tester.tap(buttonEntrar);
+    await tester.pumpAndSettle();
 
-
-        var buttonEntrar = find.byType(ToroButton).last;
-        await tester.tap(buttonEntrar);
-        await tester.pumpAndSettle();
-
-        expect(find.byType(Login), findsOneWidget);
-      });
+    expect(find.byType(Login), findsOneWidget);
+  });
 }

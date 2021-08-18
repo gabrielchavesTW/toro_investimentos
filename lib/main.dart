@@ -4,7 +4,7 @@ import 'package:toro_investimentos/src/config/env.dart';
 import 'package:toro_investimentos/src/ioc.dart';
 import 'src/app.dart';
 
-void environmentSetup(){
+void environmentSetup() {
   const String environment = String.fromEnvironment(
     'ENVIRONMENT',
     defaultValue: Environment.DEV,
