@@ -24,7 +24,9 @@ class StepButtons extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
         ),
         buttonTextStyle: TextStyle(color: Theme.of(context).primaryColor),
-        onPressed: () {}));
+        onPressed: () {
+          Navigator.pushNamed(context, '/login');
+        }));
     return Column(
       children: children,
     );
