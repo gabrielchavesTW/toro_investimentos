@@ -10,7 +10,7 @@ class App extends StatelessWidget {
       routes: {
         '/login': (context) => Login(),
       },
-      theme: defaultTema(),
+      theme: defaultTema(context),
       home: Scaffold(body: StepPage()),
     );
   }

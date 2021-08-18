@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:toro_investimentos/src/ui/login/login_form.dart';
+import 'package:toro_investimentos/src/ui/tema.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 0, horizontal: 32),
@@ -16,18 +18,18 @@ class Login extends StatelessWidget {
               child: Image.asset(
                 'assets/images/logo-transparent.png',
                 key: ValueKey('ToroLogoLogin'),
-                width: 150,
+                width: (deviceWidth / 2.4),
               ),
             ),
             RichText(
                 key: ValueKey('LoginDescription'),
                 text: TextSpan(
-                    style: Theme.of(context).textTheme.headline1,
+                    style: TemaToro.headline1(context),
                     children: <TextSpan>[
                       TextSpan(text: 'O jeito mais fácil\nde '),
                       TextSpan(
                         text: 'investir',
-                        style: Theme.of(context).textTheme.headline2,
+                        style: TemaToro.headline2(context),
                       ),
                       TextSpan(text: ' na \nBolsa.'),
                     ])),

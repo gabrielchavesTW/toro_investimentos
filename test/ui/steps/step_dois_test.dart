@@ -5,12 +5,11 @@ import 'package:toro_investimentos/src/ui/steps/step_dois.dart';
 
 void main() {
   Future<void> setup(WidgetTester tester) async {
+    //Samsung S9 device
+    tester.binding.window.devicePixelRatioTestValue = 0.5202312138728323;
+    tester.binding.window.physicalSizeTestValue = Size(360, 900);
     await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: SingleChildScrollView(
-          child: StepDois(),
-        ),
-      ),
+      home: Scaffold(body: StepDois()),
     ));
   }
 
