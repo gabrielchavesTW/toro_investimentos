@@ -3,11 +3,17 @@
 ## Architecture
 .
 ├── blocs               # folder com os arquivos do nosso controle de estado, para este projeto escolhi o Cubit do pacote bloc
+
 ├── config              # folder com os arquivos de configuração do nosso projeto
+
 ├── models              # folder com os arquivos que representam o nosso modelo de dados
+
 ├── repository          # folder com os arquivos que fazem chamadas de API ou leitura de arquivos local    
+
 ├── ui                  # folder com os arquivos das nossas views
+
 ├── app.dart            # arquivo inicial do projeto
+
 └── ioc.dart            # registro dos arquivos para a inversão de controle e injestão de dependência
 
 Para a arquitetura do projeto, escolhi o MVVM. Para isso, utilizei um pacote de injestão de dependência
