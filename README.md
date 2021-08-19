@@ -1,33 +1,36 @@
 # toro_investimentos
 
-Teste Toro Investimentos
+## Architecture
+.
+├── blocs               # folder com os arquivos do nosso controle de estado, para este projeto escolhi o Cubit do pacote bloc
+├── config              # folder com os arquivos de configuração do nosso projeto
+├── models              # folder com os arquivos que representam o nosso modelo de dados
+├── repository          # folder com os arquivos que fazem chamadas de API ou leitura de arquivos local    
+├── ui                  # folder com os arquivos das nossas views
+├── app.dart            # arquivo inicial do projeto
+└── ioc.dart            # registro dos arquivos para a inversão de controle e injestão de dependência
 
-## Getting Started
+Para a arquitetura do projeto, escolhi o MVVM. Para isso, utilizei um pacote de injestão de dependência
+e inversão de controle (getIt). Com ele, podemos separar o nosso view-model (bloc) da nossa camada de visualização, 
+além de podermos injetar os nossos repositorys no nosso view-model, mandando as responsabilidades bem
+separadas.
 
-This project is a starting point for a Flutter application.
+## Como rodar o projeto?
+1- Para rodar o projeto é necessário ter o flutter instalado na sua máquina, para isso, siga o tutorial
+da documentação oficial: https://flutter.dev/docs/get-started/install
 
-A few resources to get you started if this is your first Flutter project:
+2- Com o flutter instalado, rode o comando "flutter doctor" e tenha certeza que está tudo ok.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+3- Conecte um aparelho no seu computador e tenha certeza que ele está com a opção de Ancoragem USB habilitada.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4- Após resolver os warnings/issues do passo 2, e executar o passo 3 com sucesso, clone o projeto e abra um terminal no diretorio onde vc clonou-o.
 
-
-
-
-## Architecure
-1- blocs package terá as nossas implementações do BLOC e arquivos relacionados.
-2- models package terá as classes do nosso modelo de dados. 
-3- repository package terá as classes de repositório e chamadas para internet. 
-4- ui package terá as telas que são exibidas para o usuário.
-
+5- Agora basta executar o comando "flutter run" e o aplicativo seraá instalado e executado.
 
 ## Como rodar os testes unitários
 1- É necessário rodar o comando "flutter pub run build_runner build --delete-conflicting-outputs" para gerar os arquivos de mock.
-2- Depois de gerados, os testes podem ser executados normalmente
+
+2- Depois de gerados, os testes podem ser executados normalmente com o comando "flutter test"
 
 ### Observações
 1- Durante o desenvolvimento do teste, você pode rodar o comando "flutter pub run build_runner watch" 

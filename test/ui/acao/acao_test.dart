@@ -4,7 +4,6 @@ import 'package:get_it/get_it.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:toro_investimentos/src/blocs/acao.dart';
-import 'package:toro_investimentos/src/repository/acao_repository.dart';
 import 'package:toro_investimentos/src/ui/acoes/acoes.dart';
 
 import 'acao_test.mocks.dart';
