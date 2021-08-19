@@ -41,7 +41,7 @@ class TemaToro {
   static TextStyle headline3(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     return TextStyle(
-        fontSize: (deviceWidth / 11.75),
+        fontSize: (deviceWidth / 12.5),
         fontWeight: FontWeight.w400,
         color: Colors.black);
   }
